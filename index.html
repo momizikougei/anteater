@@ -4,18 +4,41 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>アリクイ | アート専門フリマアプリ</title>
+<meta name="description" content="アリクイは、一点ものの芸術品と出会えるアート専門フリマアプリ。絵画・陶芸・写真などを気軽に探したり、自分の作品を出品できます。AI生成アートは出品禁止。">
+<meta name="theme-color" content="#141414">
+<meta property="og:type" content="website">
+<meta property="og:title" content="アリクイ | アート専門フリマアプリ">
+<meta property="og:description" content="「好き」が見つかるアート専門フリマアプリ。一点ものの芸術品を、もっと身近に。">
+<meta property="og:image" content="img/hero-bg.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo.jpg">
+<link rel="apple-touch-icon" href="img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-bg.jpg">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+
+<!-- PC表示時のみ左側に出るパネル -->
+<aside class="side" aria-hidden="true">
+  <img src="img/logo.jpg" alt="" width="88" height="88">
+  <p class="side-en">Art Marketplace App</p>
+  <p class="side-catch">「好き」が見つかる<br>アート専門フリマアプリ</p>
+  <div class="badges">
+    <a href="#" tabindex="-1"><img src="apple.svg" alt="" width="109" height="40"></a>
+    <a href="#" tabindex="-1"><img src="google.svg" alt="" width="135" height="40"></a>
+  </div>
+</aside>
+
 <div class="page">
 
-<header>
-  <a class="brand" href="#top"><img data-slot="logo">アリクイ</a>
-  <button class="burger" aria-label="メニュー" aria-expanded="false"><i></i><i></i><i></i></button>
-  <nav class="menu">
+<header class="hd">
+  <a class="brand" href="#top"><img src="img/logo.jpg" alt="" width="28" height="28">アリクイ</a>
+  <button class="burger" aria-label="メニュー" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+  <nav class="menu" id="menu">
     <a href="#about"><span>アリクイとは<small>About</small></span><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></a>
     <a href="#reco"><span>おすすめの方<small>For you</small></span><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></a>
     <a href="#features"><span>3つの特徴<small>Features</small></span><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></a>
@@ -25,86 +48,101 @@
 
 <main id="top">
 <section class="hero">
-  <div class="herobg"><img data-slot="hero-bg"></div>
-  <h1 class="catch c1">好きな美術品を</h1>
-  <p class="catch c2">もっと身近に。</p>
-  <div class="phone" aria-hidden="true">
-    <img class="phone-screen" data-slot="phone-screen">
+  <img class="herobg" src="img/hero-bg.jpg" alt="美術館で絵画を鑑賞する人" width="1800" height="1200" fetchpriority="high">
+  <div class="catch">
+    <p class="en">Art Marketplace App</p>
+    <h1>好きな美術品を、<br>もっと身近に。</h1>
+  </div>
+  <div class="phone">
+    <img src="img/phone-screen.jpg" alt="アリクイアプリのホーム画面" width="750" height="1334">
   </div>
 </section>
 
 <a class="btn" href="#download"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>アリクイアプリをダウンロード</a>
 
-<section class="trio" aria-label="買う・売る・見つける">
-  <div class="mp"><img data-slot="mid-phone"></div>
-  <span class="dot d1">買う</span><span class="dot d2">売る</span><span class="dot d3">見つける</span>
+<section class="trio" aria-labelledby="trio-h">
+  <p class="eyebrow rv">What you can do</p>
+  <h2 class="rv" id="trio-h">買う・売る・見つける</h2>
+  <div class="trio-body">
+    <div class="mp rv"><img src="img/mid-phone.jpg" alt="作品一覧画面" width="750" height="1334" loading="lazy" decoding="async"></div>
+    <ol class="steps">
+      <li class="rv" style="--d:.1s"><span class="dot">買う</span><p>一点ものの作品を、作者から直接購入。</p></li>
+      <li class="rv" style="--d:.2s"><span class="dot">売る</span><p>スマホで撮影して、そのまま出品。</p></li>
+      <li class="rv" style="--d:.3s"><span class="dot">見つける</span><p>ジャンルや作家から、新しい出会いを。</p></li>
+    </ol>
+  </div>
 </section>
 
 <section class="intro" id="about">
-  <h2>「好き」が見つかる<br>アート専門フリマアプリ</h2>
-  <p>アリクイは、一点ものの芸術品と出会えるアート専門フリマアプリです。絵画・陶芸・写真などを気軽に探したり、自分の作品を出品することもできます。見るだけでも大歓迎。まずは気になる作品をチェックしてみてください。</p>
+  <p class="eyebrow rv">About</p>
+  <h2 class="rv">「好き」が見つかる<br>アート専門フリマアプリ</h2>
+  <p class="rv" style="--d:.1s">アリクイは、一点ものの芸術品と出会えるアート専門フリマアプリです。絵画・陶芸・写真などを気軽に探したり、自分の作品を出品することもできます。見るだけでも大歓迎。まずは気になる作品をチェックしてみてください。</p>
 </section>
 
-<section class="dl" id="download">
+<section class="dl rv" id="download">
   <h3>アリクイアプリをダウンロード</h3>
   <div class="badges">
     <!-- リンク先は href を書き換えてください -->
-    <a class="b1" href="#"><img data-slot="badge-appstore"></a>
-    <a class="b2" href="#"><img data-slot="badge-googleplay"></a>
+    <a href="#"><img src="apple.svg" alt="App Storeからダウンロード" width="109" height="40"></a>
+    <a href="#"><img src="google.svg" alt="Google Playで手に入れよう" width="135" height="40"></a>
   </div>
 </section>
 
 <section class="rec" id="reco">
-  <h2>「アリクイ」は<br>こんな方におすすめ</h2>
-  <div class="card">
-    <div class="say say-wide">アートを部屋に飾りたいけれど、どこで買えばいいのだろう…？</div>
-    <div class="ill"><img data-slot="illust-1"></div>
-    <p class="t"></p>
+  <p class="eyebrow rv">For you</p>
+  <h2 class="rv">「アリクイ」は<br>こんな方におすすめ</h2>
+  <div class="card rv">
+    <div class="say">アートを部屋に飾りたいけれど、どこで買えばいいのだろう…？</div>
+    <div class="ill"><img src="img/illust-1.png" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
+    <p>作品との出会いを、もっと気軽に。絵画や写真、立体作品まで、暮らしに似合う一品をゆっくり探せます。</p>
   </div>
-  <div class="card dark">
-    <div class="say">自分の作品を気軽に出品したいけれど<br>どうすればいい…？</div>
-    <div class="ill"><img data-slot="illust-2"></div>
-    <p class="t"></p>
+  <div class="card dark rv">
+    <div class="say">自分の作品を気軽に出品したいけれど、どうすればいい…？</div>
+    <div class="ill"><img src="img/illust-2.png" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
+    <p>つくった作品を、必要としている誰かへ。専門的な知識がなくても、写真と説明を添えて気軽に出品できます。</p>
   </div>
-  <div class="card">
-    <div class="say">新しい作家さんを<br>見つけたいな…</div>
-    <div class="ill"><img data-slot="illust-3"></div>
-    <p class="t"></p>
+  <div class="card rv">
+    <div class="say">新しい作家さんを見つけたいな…</div>
+    <div class="ill"><img src="img/illust-3.png" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
+    <p>まだ知らない作家との出会いを。ジャンルや作品を眺めながら、自分だけのお気に入りを見つけられます。</p>
   </div>
 </section>
 
-<section class="why" id="features">
+<section class="why rv" id="features">
   <div class="whyhead">
-    <img data-slot="why-bg">
-    <h2>なぜアリクイ？<br>安心に取引ができる<br>3つの特徴</h2>
+    <img src="img/why-bg.jpg" alt="" width="1000" height="1000" loading="lazy" decoding="async">
+    <div class="whytitle rv" style="--d:.15s">
+      <p class="eyebrow">Features</p>
+      <h2>なぜアリクイ？<br>安心に取引ができる<br>3つの特徴</h2>
+    </div>
   </div>
   <ul class="feat">
-    <li>
+    <li class="rv" style="--d:.1s">
       <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H10l-4 4v-4H4z"/></svg></span>
       <div><b>作者と直接やり取りができる</b><p>作品のことが気になったら、作者にメッセージで質問できます。</p></div>
     </li>
-    <li>
+    <li class="rv" style="--d:.2s">
       <span class="ic"><svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h14M5 18h8"/></svg></span>
       <div><b>進行状況がわかる</b><p>購入から発送、受け取りまでの流れをアプリでいつでも確認できます。</p></div>
     </li>
-    <li>
+    <li class="rv" style="--d:.3s">
       <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M6.5 6.5l11 11"/></svg></span>
       <div><b>AI生成アートを出品禁止</b><p>人の手でつくられた作品だけが並ぶ、安心のマーケットです。</p></div>
     </li>
   </ul>
 </section>
 
-<section class="dl dl2">
+<section class="dl rv">
   <h3>アリクイアプリをダウンロード</h3>
   <div class="badges">
-    <a class="b1" href="#"><img data-slot="badge-appstore"></a>
-    <a class="b2" href="#"><img data-slot="badge-googleplay"></a>
+    <a href="#"><img src="apple.svg" alt="App Storeからダウンロード" width="109" height="40" loading="lazy"></a>
+    <a href="#"><img src="google.svg" alt="Google Playで手に入れよう" width="135" height="40" loading="lazy"></a>
   </div>
 </section>
 </main>
 
 <footer>
-  <img data-slot="logo">
+  <img src="img/logo.jpg" alt="アリクイ" width="56" height="56" loading="lazy">
   <div class="nm">アリクイ</div>
   <p class="ftag">「好き」が見つかる<br>アート専門フリマアプリ</p>
 
@@ -117,7 +155,6 @@
 
   <!-- SNSのリンク先は href を書き換えてください -->
   <ul class="fsns">
-    <li><a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></a></li>
     <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6"/></svg></a></li>
   </ul>
 
@@ -137,64 +174,23 @@
 </div>
 
 <script>
-/* ============================================================
-   画像差し替えエリア
-   '' のままだとダミー画像が出ます。画像のパス・URL・data URI を
-   入れるだけで、同じキーの画像がページ内すべて差し替わります。
-   例) 'logo': 'images/logo.png'
-   ============================================================ */
-const IMAGES = {
-  'logo':             'logo.jpg',
-  'hero-bg':          'hero-bg.png',
-  'why-bg':           'bg2.jpg',
-  'phone-screen':     'phone-screen.jpg',
-  'mid-phone':        'mid-phone.jpg',
-  'badge-appstore':   'apple.svg',
-  'badge-googleplay': 'google.svg',
-  'illust-1':         'illust-1.png',
-  'illust-2':         'illust-2.png',
-  'illust-3':         'illust-3.png'
-};
-
-/* ---- 以下はダミー画像の設定（通常は触らなくてOK） ---- */
-// [ラベル, 色1, 色2, 文字色, 幅, 高さ]
-const PH = {
-  'logo':[ 'LOGO','#fff','#eee','#222',56,56],
-  'hero-bg':['ヒーロー背景','#c79a6a','#6e4a2c','#fff',480,540],
-  'why-bg':['特徴背景','#2c4a7a','#0d1b3a','#fff',446,280],
-  'phone-screen':['スマホ画面','#8bbdf0','#6cae5c','#fff',192,406],
-  'mid-phone':['スマホ画面','#8bbdf0','#6cae5c','#fff',132,228],
-  'badge-appstore':['App Store','#000','#222','#fff',92,34],
-  'badge-googleplay':['Google Play','#000','#222','#fff',104,34],
-  'illust-1':['イラスト1','#d3d8df','#d3d8df','#555',200,130],
-  'illust-2':['イラスト2','#cfcfcf','#cfcfcf','#555',200,130],
-  'illust-3':['イラスト3','#d3d8df','#d3d8df','#555',200,130]
-};
-const ph=([t,a,b,c,w,h])=>'data:image/svg+xml,'+encodeURIComponent(
- `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" fill="${c}" font-size="12" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle">${t}</text></svg>`);
-
-// おすすめカードの紹介文
-const RECOMMEND_TEXTS = [
-  '作品との出会いを、もっと気軽に。絵画や写真、立体作品まで、暮らしに似合う一品をゆっくり探せます。',
-  'つくった作品を、必要としている誰かへ。専門的な知識がなくても、写真と説明を添えて気軽に出品できます。',
-  'まだ知らない作家との出会いを。ジャンルや作品を眺めながら、自分だけのお気に入りを見つけられます。'
-];
-document.querySelectorAll('.t').forEach((p, i) => {
-  p.textContent = RECOMMEND_TEXTS[i] || '';
-});
-
-// 画像の反映（未設定 or 読み込み失敗ならダミー表示）
-document.querySelectorAll('[data-slot]').forEach(el=>{
-  const k=el.dataset.slot,p=PH[k]||['IMAGE','#ddd','#bbb','#333',200,200];
-  el.alt=p[0];
-  el.onerror=()=>{el.onerror=null;el.src=ph(p)};
-  el.src=IMAGES[k]||ph(p);
-});
-
 // ハンバーガーメニュー
 const bg=document.querySelector('.burger'),mn=document.querySelector('.menu');
 bg.onclick=()=>bg.setAttribute('aria-expanded',mn.classList.toggle('open'));
 mn.onclick=()=>{mn.classList.remove('open');bg.setAttribute('aria-expanded','false')};
+
+// スクロールでヘッダーに背景
+const hd=document.querySelector('.hd');
+const onScroll=()=>hd.classList.toggle('scrolled',scrollY>8);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// セクションのフェードイン
+// 画面に入るたびに表示。画面の下へ外れたときだけ戻すので、上へ戻るスクロールでは消えない
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting) e.target.classList.add('in');
+  else if(e.boundingClientRect.top>0) e.target.classList.remove('in');
+}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
